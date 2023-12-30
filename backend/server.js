@@ -23,10 +23,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/books", bookRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/categories", categoryRoutes);
-
+let pass = "password"
 /* MongoDB connection */
 mongoose.connect(
-  process.env.MONGO_URL,
+ ` mongodb+srv://srashtidwivedi001:${pass}@cluster0.5sqwcpp.mongodb.net/?retryWrites=true&w=majority`,
   {
     useCreateIndex: true,
     useNewUrlParser: true,
